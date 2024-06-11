@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="1,088.527" tests="20" skipped="0" failures="3" errors="0">
+<testcase classname="Find schemes for your business - check anchors" name="Confirm header and footer anchors on the FIND_SCHEMES page" time="28.135">
+<system-out><![CDATA[
+Given the user navigates to the "FIND_SCHEMES" page.........................passed
+Then all home page header and footer anchors link to the correct pages......passed
+]]></system-out>
+</testcase>
+<testcase classname="Find schemes for your business - check anchors" name="Confirm anchors on the FIND_SCHEMES page" time="10.209">
+<system-out><![CDATA[
+Given the user navigates to the "FIND_SCHEMES" page.........................passed
+Then all FIND_SCHEMES anchors link to the correct pages.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Find schemes for your business - check anchors" name="Confirm anchors on the APPRENTICESHIPS page" time="10.63">
+<system-out><![CDATA[
+Given the user navigates to the "APPRENTICESHIPS" page......................passed
+Then all APPRENTICESHIPS anchors link to the correct pages..................passed
+]]></system-out>
+</testcase>
+<testcase classname="Find schemes for your business - check anchors" name="Confirm anchors on the T_LEVELS page" time="12.496">
+<system-out><![CDATA[
+Given the user navigates to the "T_LEVELS" page.............................passed
+Then all T_LEVELS anchors link to the correct pages.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Find schemes for your business - check anchors" name="Confirm anchors on the BOOTCAMPS page" time="12.588">
+<system-out><![CDATA[
+Given the user navigates to the "BOOTCAMPS" page............................passed
+Then all BOOTCAMPS anchors link to the correct pages........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Find schemes for your business - check anchors" name="Confirm anchors on the MULTIPLY page" time="9.69">
+<system-out><![CDATA[
+Given the user navigates to the "MULTIPLY" page.............................passed
+Then all MULTIPLY anchors link to the correct pages.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Find schemes for your business - check anchors" name="Confirm anchors on the HTQ page" time="11.009">
+<system-out><![CDATA[
+Given the user navigates to the "HTQ" page..................................passed
+Then all HTQ anchors link to the correct pages..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Find schemes for your business - check anchors" name="Confirm anchors on the INTERNSHIPS page" time="8.552">
+<failure type="java.lang.AssertionError" message="anchors list should be the same expected:&lt;[an education health and care (EHC) plan, Get career ideas and browse your training options, Benefits for your business, Cost, Your responsibilities, Find out more, read guidance on GOV.UK, the Internships Work lead for your region, Employing disabled people and people with health conditions, Support with employee health and disability service]&gt; but was:&lt;[an education health and care (EHC) plan, Get career ideas and browse your training options, Benefits for your business, Cost, Case studies, Your responsibilities, Find out more, read guidance on GOV.UK, the Internships Work lead for your region, Employing disabled people and people with health conditions, Support with employee health and disability service]&gt;">
+<![CDATA[java.lang.AssertionError: anchors list should be the same expected:<[an education health and care (EHC) plan, Get career ideas and browse your training options, Benefits for your business, Cost, Your responsibilities, Find out more, read guidance on GOV.UK, the Internships Work lead for your region, Employing disabled people and people with health conditions, Support with employee health and disability service]> but was:<[an education health and care (EHC) plan, Get career ideas and browse your training options, Benefits for your business, Cost, Case studies, Your responsibilities, Find out more, read guidance on GOV.UK, the Internships Work lead for your region, Employing disabled people and people with health conditions, Support with employee health and disability service]>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at sfa.das.StepDefinitions.confirmActualAnchors(StepDefinitions.java:1074)
+	at sfa.das.StepDefinitions.compareAndClickAnchors(StepDefinitions.java:944)
+	at sfa.das.StepDefinitions.confirmPageAnchorsLite(StepDefinitions.java:930)
+	at sfa.das.StepDefinitions.allINTERNSHIPSAnchorsLinkToTheCorrectPages(StepDefinitions.java:735)
+	at ✽.all INTERNSHIPS anchors link to the correct pages(classpath:features/sfa/das/anchors.feature:33)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user navigates to the "INTERNSHIPS" page..........................passed
+Then all INTERNSHIPS anchors link to the correct pages......................failed
+]]></system-out>
+</testcase>
+<testcase classname="Find schemes for your business - check anchors" name="Confirm anchors on the CARE_LEAVER_COVENANT page" time="9.103">
+<system-out><![CDATA[
+Given the user navigates to the "CARE_LEAVER_COVENANT" page.................passed
+Then all CARE_LEAVER_COVENANT anchors link to the correct pages.............passed
+]]></system-out>
+</testcase>
+<testcase classname="Find schemes for your business - check anchors" name="Confirm anchors on the SWAP page" time="9.041">
+<system-out><![CDATA[
+Given the user navigates to the "SWAP" page.................................passed
+Then all SWAP anchors link to the correct pages.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Find schemes for your business - check anchors" name="Confirm anchors on the PRISONERS page" time="9.499">
+<system-out><![CDATA[
+Given the user navigates to the "PRISONERS" page............................passed
+Then all PRISONERS anchors link to the correct pages........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Find schemes for your business - check anchors" name="Confirm anchors on the FREE_COURSES page and all explore section" time="18.018">
+<system-out><![CDATA[
+Given the user navigates to the "FREE_COURSES" page.........................passed
+Then all FREE_COURSES anchors link to the correct pages and all explore section.passed
+]]></system-out>
+</testcase>
+<testcase classname="Find schemes for your business - check anchors" name="Confirm anchors on the CONTACT page" time="9.252">
+<system-out><![CDATA[
+Given the user navigates to the "CONTACT" page..............................passed
+Then all CONTACT anchors link to the correct pages..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Find schemes for your business - check anchors" name="Confirm anchors on the ACCESSIBILITY page" time="9.529">
+<system-out><![CDATA[
+Given the user navigates to the "ACCESSIBILITY" page........................passed
+Then all ACCESSIBILITY anchors link to the correct pages....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Find schemes for your business - check anchors" name="Confirm anchors on the PAGE_NOT_FOUND page" time="9.516">
+<system-out><![CDATA[
+Given the user navigates to the "PAGE_NOT_FOUND" page.......................passed
+Then all PAGE_NOT_FOUND anchors link to the correct pages...................passed
+]]></system-out>
+</testcase>
+<testcase classname="Find schemes for your business - compare" name="Confirm compare of schemes" time="15.16">
+<system-out><![CDATA[
+Given the user navigates to the "FIND_SCHEMES" page.........................passed
+When the user wants to compare the schemes..................................passed
+Then they see all the schemes compared......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Find schemes for your business - check filter" name="Confirm filter on the FIND_SCHEMES page" time="831.817">
+<failure type="org.openqa.selenium.ElementClickInterceptedException" message="element click intercepted: Element &lt;input class=&quot;govuk-checkboxes__input&quot; id=&quot;cost--free&quot; name=&quot;FilterAspects&quot; type=&quot;checkbox&quot; value=&quot;cost--free&quot;&gt; is not clickable at point (460, 903). Other element would receive the click: &lt;div id=&quot;scheme-filter-options&quot; class=&quot;das-filter__body&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=125.0.6422.78)
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3af23a5c9340cd2e5bf3268c4eabae53, clickElement {id=f.20F769A1FC06129F49738472A727F9B2.d.2D4D38290B478247F6B3CBF620703CCF.e.10636}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.78, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\manoj\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:18423}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:18423/devtoo..., se:cdpVersion: 125.0.6422.78, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (3af23a5c9340cd2e5bf3268c4eabae53)] -&gt; id: cost--free]
+Session ID: 3af23a5c9340cd2e5bf3268c4eabae53">
+<![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input class="govuk-checkboxes__input" id="cost--free" name="FilterAspects" type="checkbox" value="cost--free"> is not clickable at point (460, 903). Other element would receive the click: <div id="scheme-filter-options" class="das-filter__body">...</div>
+  (Session info: chrome=125.0.6422.78)
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3af23a5c9340cd2e5bf3268c4eabae53, clickElement {id=f.20F769A1FC06129F49738472A727F9B2.d.2D4D38290B478247F6B3CBF620703CCF.e.10636}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.78, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\manoj\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:18423}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:18423/devtoo..., se:cdpVersion: 125.0.6422.78, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (3af23a5c9340cd2e5bf3268c4eabae53)] -> id: cost--free]
+Session ID: 3af23a5c9340cd2e5bf3268c4eabae53
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at sfa.das.StepDefinitions.checkboxCombo(StepDefinitions.java:1328)
+	at sfa.das.StepDefinitions.filterReportsTheCorrectData(StepDefinitions.java:1270)
+	at ✽.filter reports the correct data(classpath:features/sfa/das/filter.feature:5)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user navigates to the "FIND_SCHEMES" page.........................passed
+Then filter reports the correct data........................................failed
+]]></system-out>
+</testcase>
+<testcase classname="Find schemes for your business - check Home page anchors" name="Confirm  anchors on the HOME page" time="8.697">
+<failure type="java.lang.AssertionError" message="anchors list should be the same expected:&lt;[Get career ideas and browse your training options, Find training and employment schemes, Get business finance and support, Guidance on employing people, Employ someone: step by step, Employer standards for careers education]&gt; but was:&lt;[Get career ideas and browse your training options, Find training and employment schemes, Get business finance and support, Guidance on employing people, Employ someone: step by step, Help to scale-up and grow your business, Learn how to sell your products or services overseas, The Intermediary Ambassador Network, Employer standards for careers education]&gt;">
+<![CDATA[java.lang.AssertionError: anchors list should be the same expected:<[Get career ideas and browse your training options, Find training and employment schemes, Get business finance and support, Guidance on employing people, Employ someone: step by step, Employer standards for careers education]> but was:<[Get career ideas and browse your training options, Find training and employment schemes, Get business finance and support, Guidance on employing people, Employ someone: step by step, Help to scale-up and grow your business, Learn how to sell your products or services overseas, The Intermediary Ambassador Network, Employer standards for careers education]>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at sfa.das.StepDefinitions.confirmActualAnchors(StepDefinitions.java:1074)
+	at sfa.das.StepDefinitions.compareAndClickAnchors(StepDefinitions.java:944)
+	at sfa.das.StepDefinitions.confirmPageAnchorsLite(StepDefinitions.java:930)
+	at sfa.das.StepDefinitions.allHOMEAnchorsLinkToTheCorrectPages(StepDefinitions.java:780)
+	at ✽.all HOME anchors link to the correct pages(classpath:features/sfa/das/home.feature:6)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user navigates to the "HOME" page.................................passed
+Then all HOME anchors link to the correct pages.............................failed
+]]></system-out>
+</testcase>
+<testcase classname="Find schemes for your business - check Home page anchors" name="Confirm  anchors on the HOME page" time="8.35">
+<system-out><![CDATA[
+Given the user navigates to the "Employer standards for careers education" page.passed
+Then all EMPLOYER_STANDARDS anchors link to the correct pages...............passed
+]]></system-out>
+</testcase>
+<testcase classname="Find schemes for your business - sorting schemes" name="Schemes are sorted base on No Sort, Popularity, Duration and Cost" time="46.613">
+<system-out><![CDATA[
+Given the user navigates to the "FIND_SCHEMES" page.........................passed
+Then schemes are correctly sorted based on the chosen sort..................passed
+]]></system-out>
+</testcase>
+</testsuite>

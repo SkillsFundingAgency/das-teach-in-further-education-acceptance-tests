@@ -1,0 +1,11 @@
+environments:
+  at:
+    url: "https://find-employer-schemes.education.gov.uk/"
+
+  test:
+    url: "https://find-employer-schemes.education.gov.uk/"
+
+  pp:
+    url: "https://find-employer-schemes.education.gov.uk/"
+  live:
+    url: "https://find-employer-schemes.education.gov.uk/"
