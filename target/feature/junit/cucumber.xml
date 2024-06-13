@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="15.108" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Find schemes for your business - check anchors" name="Confirm anchors on the PAGE_NOT_FOUND page" time="14.732">
+<system-out><![CDATA[
+Given the user navigates to the "PAGE_NOT_FOUND" page.......................passed
+Then all PAGE_NOT_FOUND anchors link to the correct pages...................passed
+]]></system-out>
+</testcase>
+</testsuite>

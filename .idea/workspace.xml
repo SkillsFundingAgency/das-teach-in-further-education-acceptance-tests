@@ -6,6 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="7fb12697-7ba9-4e5c-9aa3-53d4eaf7c223" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/browser/resolution.properties" beforeDir="false" afterPath="$PROJECT_DIR$/browser/resolution.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/sfa/das/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/sfa/das/Helper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/sfa/das/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/sfa/das/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/sfa/das/anchors.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/sfa/das/anchors.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/sfa/das/filter.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/sfa/das/filter.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/features/sfa/das/anchors.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/sfa/das/anchors.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/features/sfa/das/filter.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/sfa/das/filter.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sfa/das/Helper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sfa/das/Helper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sfa/das/TestRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sfa/das/TestRunner.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,28 +46,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.GenerateAllCombinations.executor": "Debug",
-    "Cucumber Java.Scenario: Confirm  anchors on the HOME page.executor": "Run",
-    "Cucumber Java.Scenario: Confirm anchors on the APPRENTICESHIPS page.executor": "Run",
-    "Cucumber Java.Scenario: Confirm anchors on the BOOTCAMPS page.executor": "Run",
-    "Cucumber Java.Scenario: Confirm anchors on the FIND_SCHEMES page.executor": "Run",
-    "Cucumber Java.Scenario: Confirm anchors on the MULTIPLY page.executor": "Run",
-    "Cucumber Java.Scenario: Confirm anchors on the SWAP page.executor": "Run",
-    "Cucumber Java.Scenario: Confirm anchors on the T_LEVELS page.executor": "Run",
-    "Cucumber Java.Scenario: Confirm header and footer anchors on the FIND_SCHEMES page.executor": "Run",
-    "JUnit.TestRunner.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "false",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/New projects/das-teach-in-further-education-acceptance-tests",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "inlay.hints"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.GenerateAllCombinations.executor&quot;: &quot;Debug&quot;,
+    &quot;Cucumber Java.Scenario: Confirm  anchors on the HOME page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Confirm anchors on the APPRENTICESHIPS page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Confirm anchors on the BOOTCAMPS page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Confirm anchors on the FIND_SCHEMES page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Confirm anchors on the MULTIPLY page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Confirm anchors on the SWAP page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Confirm anchors on the T_LEVELS page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Confirm header and footer anchors on the FIND_SCHEMES page.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestRunner.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;false&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/New projects/das-teach-in-further-education-acceptance-tests&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Cucumber Java.Scenario: Confirm  anchors on the HOME page">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />

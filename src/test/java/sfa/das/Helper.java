@@ -2,6 +2,8 @@ package sfa.das;
 
 import io.github.cdimascio.dotenv.Dotenv;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
@@ -13,6 +15,8 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 
 @Slf4j
 public class Helper {
+    private static final Logger log = LoggerFactory.getLogger(Helper.class);
+
     /**
      * Reads the yaml file as an InputStream.
      *
@@ -57,6 +61,7 @@ public class Helper {
             if (replacementValue == null) {
                 log.info("**** environment variable set to empty string as not defined {} ****",  parts[0]);
                 replacementValue = "";
+
             }
             m.appendReplacement(sb, replacementValue);
         }

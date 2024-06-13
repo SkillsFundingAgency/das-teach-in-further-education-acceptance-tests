@@ -56,6 +56,7 @@ Feature: Find schemes for your business - check anchors
     Given the user navigates to the "ACCESSIBILITY" page
     Then all ACCESSIBILITY anchors link to the correct pages
 
+  @smoke
   Scenario: Confirm anchors on the PAGE_NOT_FOUND page
     Given the user navigates to the "PAGE_NOT_FOUND" page
     Then all PAGE_NOT_FOUND anchors link to the correct pages
