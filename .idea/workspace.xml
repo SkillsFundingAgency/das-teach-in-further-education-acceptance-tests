@@ -5,22 +5,102 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fb12697-7ba9-4e5c-9aa3-53d4eaf7c223" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/browser/chromedriver/win64/127.0.6533.119/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/browser/chromedriver/win64/127.0.6533.88/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/browser/chromedriver/win64/127.0.6533.99/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/browser/chromedriver/win64/128.0.6613.119/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/browser/chromedriver/win64/128.0.6613.137/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/browser/chromedriver/win64/129.0.6668.58/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/browser/chromedriver/win64/129.0.6668.70/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/browser/chromedriver/win64/129.0.6668.89/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/sfa/das/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/sfa/das/base/Hooks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/sfa/das/pages/BecomeAFETeacherPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/sfa/das/pages/FindFundingAndTrainingPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/sfa/das/pages/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/sfa/das/pages/IsTeachingRightForMePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/sfa/das/pages/SearchForATeachingJobPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/sfa/das/pages/TalkToAnAdviserPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/sfa/das/steps/BecomeAFETeacherSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/sfa/das/steps/FindFundingAndTrainingSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/sfa/das/steps/HomeSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/sfa/das/steps/IsTeachingRightForMeSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/sfa/das/steps/SearchForATeachingJobSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/sfa/das/steps/TalkToAnAdvisorSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/sfa/das/utils/WebUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/cucumber-reporting.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/sfa/das/Is-Teaching-Right-For-Me.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/sfa/das/become-a-fe-teacher.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/sfa/das/find-funding-and-training.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/sfa/das/search-for-a-teaching-job.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/sfa/das/talk-to-an-advisor.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/browser/resolution.properties" beforeDir="false" afterPath="$PROJECT_DIR$/browser/resolution.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/sfa/das/Environments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/sfa/das/Environments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/sfa/das/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/sfa/das/Helper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/sfa/das/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/sfa/das/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/sfa/das/StepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/sfa/das/StepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/sfa/das/driver/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/sfa/das/driver/DriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/sfa/das/sort/ComparisonPageSchemesComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/sfa/das/sort/ComparisonPageSchemesComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/sfa/das/sort/DefaultExploreSchemesComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/sfa/das/sort/DefaultExploreSchemesComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/sfa/das/sort/DefaultFindSchemePageSchemesComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/sfa/das/sort/DefaultFindSchemePageSchemesComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/sfa/das/sort/HomePageComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/sfa/das/sort/HomePageComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/sfa/das/sort/interim_pages/ApprenticeshipsComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/sfa/das/sort/interim_pages/ApprenticeshipsComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/sfa/das/sort/interim_pages/BootCampsComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/sfa/das/sort/interim_pages/BootCampsComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/sfa/das/sort/interim_pages/MultiplyComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/sfa/das/sort/interim_pages/MultiplyComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/sfa/das/sort/interim_pages/TLevelsComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/sfa/das/sort/interim_pages/TLevelsComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/environments.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/environments.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/sfa/das/anchors.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/sfa/das/anchors.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/sfa/das/filter.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/sfa/das/filter.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/sfa/das/home.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/sfa/das/home.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber-reports/cucumber-reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-reports/cucumber-reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/overview-failures.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/overview-failures.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/overview-features.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/overview-features.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/overview-steps.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/overview-steps.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/overview-tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/overview-tags.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/report-feature_372222117.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/report-tag_4089311534.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/feature/cucumber" beforeDir="false" afterPath="$PROJECT_DIR$/target/feature/cucumber" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/feature/json/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/feature/json/cucumber.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/feature/junit/cucumber.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/feature/junit/cucumber.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-06-13T17-39-41_672-jvmRun1.dump" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-06-13T17-39-41_672-jvmRun1.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-sfa.das.TestRunner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-sfa.das.TestRunner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/sfa.das.TestRunner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/sfa.das.TestRunner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/environments.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/environments.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/features/sfa/das/anchors.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/sfa/das/anchors.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/sfa/das/filter.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/sfa/das/filter.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/features/sfa/das/home.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/sfa/das/home.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sfa/das/Environments$Environment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sfa/das/Environments$Environment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sfa/das/Environments.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sfa/das/Environments.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/sfa/das/Helper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sfa/das/Helper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/sfa/das/TestRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sfa/das/TestRunner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sfa/das/StepDefinitions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sfa/das/StepDefinitions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sfa/das/driver/DriverFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sfa/das/driver/DriverFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sfa/das/driver/DriverFactory$DriverType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sfa/das/driver/DriverFactory$DriverType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sfa/das/driver/DriverFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sfa/das/driver/DriverFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sfa/das/sort/ComparisonPageSchemesComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sfa/das/sort/ComparisonPageSchemesComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sfa/das/sort/DefaultExploreSchemesComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sfa/das/sort/DefaultExploreSchemesComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sfa/das/sort/DefaultFindSchemePageSchemesComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sfa/das/sort/DefaultFindSchemePageSchemesComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sfa/das/sort/HomePageComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sfa/das/sort/HomePageComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sfa/das/sort/interim_pages/ApprenticeshipsComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sfa/das/sort/interim_pages/ApprenticeshipsComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sfa/das/sort/interim_pages/BootCampsComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sfa/das/sort/interim_pages/BootCampsComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sfa/das/sort/interim_pages/MultiplyComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sfa/das/sort/interim_pages/MultiplyComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sfa/das/sort/interim_pages/TLevelsComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sfa/das/sort/interim_pages/TLevelsComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/timeline/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/timeline/report.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -49,7 +129,12 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.GenerateAllCombinations.executor&quot;: &quot;Debug&quot;,
+    &quot;Cucumber Java.Feature: home.executor&quot;: &quot;Run&quot;,
     &quot;Cucumber Java.Scenario: Confirm  anchors on the HOME page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Confirm  anchors on the Tile page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Confirm  anchors on the Tile2 page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Confirm  anchors on the Tile3 page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Confirm  anchors on the Tile4 page.executor&quot;: &quot;Run&quot;,
     &quot;Cucumber Java.Scenario: Confirm anchors on the APPRENTICESHIPS page.executor&quot;: &quot;Run&quot;,
     &quot;Cucumber Java.Scenario: Confirm anchors on the BOOTCAMPS page.executor&quot;: &quot;Run&quot;,
     &quot;Cucumber Java.Scenario: Confirm anchors on the FIND_SCHEMES page.executor&quot;: &quot;Run&quot;,
@@ -57,18 +142,49 @@
     &quot;Cucumber Java.Scenario: Confirm anchors on the SWAP page.executor&quot;: &quot;Run&quot;,
     &quot;Cucumber Java.Scenario: Confirm anchors on the T_LEVELS page.executor&quot;: &quot;Run&quot;,
     &quot;Cucumber Java.Scenario: Confirm header and footer anchors on the FIND_SCHEMES page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Confirm header and footer anchors on the TiFE Homepage.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify 'Become a FE Teacher' Menu on Home Page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify 'Find A Teaching Job Near You' Link on Home Page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify 'Find Funding And Training' Menu on Home Page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify 'Find out more about your funding and training options' Link on Home Page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify 'How To Prepare A Micro Teach' Link on Home Page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify 'IS TEACHING RIGHT FOR ME?' Menu on Home Page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify 'Is Teaching Right For Me?' Menu on Home Page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify 'Search for a teaching job' Menu on Home Page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify 'Talk to an adviser' Menu on Home Page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify Accessibility statement Footer Link on Home Page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify Contact Details on Home page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify Cookies Policy Footer Link on Home Page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify DFE Logo and FE logo in Header.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify Find_A_Job_In_FE Menu on Home Page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify Find_A_Teaching_Job_Near_You Link on Home Page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify Find_Your_Local_Colleges Menu on Home Page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify Footer Links on Home Page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify Funding_And_Training_Options Menu on Home Page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify Hear_From_Current_FE_Teachers Menu on Home Page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify How_To_Prepare_A_Micro_Teach Link on Home Page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify Is-Teaching-Right-For-Me Page Title.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify Privacy Policy Footer Link on Home Page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify Sign Up feature on Home Page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify Tile1 link on the Home page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify Tile2 link on the Home page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify Tile3 link on the Home page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify Tile4 link on the Home page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify User is able to launch website.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Verify WHAT_IS_FE_TEACHING Menu on Home Page.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.TestRunner.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;false&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/New projects/das-teach-in-further-education-acceptance-tests&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.rmicompiler&quot;
   }
 }</component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Confirm  anchors on the HOME page">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Verify User is able to launch website">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -83,35 +199,20 @@
       <predefined_log_file id="idea.log" enabled="true" />
       <method />
     </configuration>
-    <configuration name="GenerateAllCombinations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sfa.das.GenerateAllCombinations" />
-      <module name="das-teach-in-further-education-acceptance-tests" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sfa.das.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Confirm  anchors on the HOME page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: home" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/sfa/das/home.feature" />
-      <option name="GLUE" value="sfa.das" />
+      <option name="GLUE" value="sfa.das.base sfa.das.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="das-teach-in-further-education-acceptance-tests" />
-      <option name="NAME_FILTER" value="^Confirm  anchors on the HOME page$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Confirm  anchors on the HOME page$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Confirm  anchors on the HOME page" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: home" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -123,15 +224,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Confirm anchors on the SWAP page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Verify Tile2 link on the Home page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/sfa/das/anchors.feature" />
-      <option name="GLUE" value="sfa.das" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/sfa/das/home.feature" />
+      <option name="GLUE" value="sfa.das.base sfa.das.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="das-teach-in-further-education-acceptance-tests" />
-      <option name="NAME_FILTER" value="^Confirm anchors on the SWAP page$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Confirm anchors on the SWAP page$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Confirm anchors on the SWAP page" />
+      <option name="NAME_FILTER" value="^Verify Tile2 link on the Home page$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify Tile2 link on the Home page$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verify Tile2 link on the Home page" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -143,15 +244,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Confirm header and footer anchors on the FIND_SCHEMES page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Verify Tile3 link on the Home page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/sfa/das/anchors.feature" />
-      <option name="GLUE" value="sfa.das" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/sfa/das/home.feature" />
+      <option name="GLUE" value="sfa.das.base sfa.das.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="das-teach-in-further-education-acceptance-tests" />
-      <option name="NAME_FILTER" value="^Confirm header and footer anchors on the FIND_SCHEMES page$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Confirm header and footer anchors on the FIND_SCHEMES page$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Confirm header and footer anchors on the FIND_SCHEMES page" />
+      <option name="NAME_FILTER" value="^Verify Tile3 link on the Home page$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify Tile3 link on the Home page$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verify Tile3 link on the Home page" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -163,18 +264,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Verify User is able to launch website" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/sfa/das/home.feature" />
+      <option name="GLUE" value="sfa.das.base sfa.das.steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="das-teach-in-further-education-acceptance-tests" />
+      <option name="NAME_FILTER" value="^Verify User is able to launch website$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify User is able to launch website$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verify User is able to launch website" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sfa.das.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="sfa.das" />
-      <option name="MAIN_CLASS_NAME" value="sfa.das.TestRunner" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Verify 'Talk to an adviser' Menu on Home Page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/sfa/das/home.feature" />
+      <option name="GLUE" value="sfa.das.base sfa.das.steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="das-teach-in-further-education-acceptance-tests" />
+      <option name="NAME_FILTER" value="^Verify \'Talk to an adviser\' Menu on Home Page$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify \'Talk to an adviser\' Menu on Home Page$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verify 'Talk to an adviser' Menu on Home Page" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -197,11 +322,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: Confirm  anchors on the HOME page" />
-        <item itemvalue="Cucumber Java.Scenario: Confirm header and footer anchors on the FIND_SCHEMES page" />
-        <item itemvalue="Application.GenerateAllCombinations" />
-        <item itemvalue="Cucumber Java.Scenario: Confirm anchors on the SWAP page" />
-        <item itemvalue="JUnit.TestRunner" />
+        <item itemvalue="Cucumber Java.Scenario: Verify User is able to launch website" />
+        <item itemvalue="Cucumber Java.Feature: home" />
+        <item itemvalue="Cucumber Java.Scenario: Verify Tile3 link on the Home page" />
+        <item itemvalue="Cucumber Java.Scenario: Verify Tile2 link on the Home page" />
+        <item itemvalue="Cucumber Java.Scenario: Verify 'Talk to an adviser' Menu on Home Page" />
       </list>
     </recent_temporary>
   </component>
@@ -232,17 +357,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/sfa/das/StepDefinitions.java</url>
-          <line>514</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/sfa/das/StepDefinitions.java</url>
-          <line>624</line>
+          <line>653</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/sfa/das/StepDefinitions.java</url>
-          <line>632</line>
+          <line>661</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -284,6 +404,71 @@
           <url>file://$PROJECT_DIR$/src/test/java/sfa/das/GenerateAllCombinations.java</url>
           <line>79</line>
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/sfa/das/StepDefinitions.java</url>
+          <line>1226</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/sfa/das/StepDefinitions.java</url>
+          <line>801</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/sfa/das/StepDefinitions.java</url>
+          <line>803</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/sfa/das/StepDefinitions.java</url>
+          <line>805</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/sfa/das/StepDefinitions.java</url>
+          <line>807</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/sfa/das/StepDefinitions.java</url>
+          <line>808</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/sfa/das/StepDefinitions.java</url>
+          <line>1237</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/sfa/das/StepDefinitions.java</url>
+          <line>1223</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/sfa/das/StepDefinitions.java</url>
+          <line>1228</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/sfa/das/StepDefinitions.java</url>
+          <line>1235</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/sfa/das/StepDefinitions.java</url>
+          <line>1234</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/sfa/das/steps/HomeSteps.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/sfa/das/steps/HomeSteps.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

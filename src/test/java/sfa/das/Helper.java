@@ -15,7 +15,7 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 
 @Slf4j
 public class Helper {
-    private static final Logger log = LoggerFactory.getLogger(Helper.class);
+    public static final Logger log = LoggerFactory.getLogger(Helper.class);
 
     /**
      * Reads the yaml file as an InputStream.

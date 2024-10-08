@@ -10,8 +10,8 @@ public class DefaultFindSchemePageSchemesComparator implements Comparator<String
     static final List<String> order = new ArrayList<>( );
 
     static {
-        order.add(ANCHOR_HEADER_VIEW_COOKIES);
-        order.add(ANCHOR_HEADER_BETA_BANNER_FEEDBACK);
+       // order.add(ANCHOR_HEADER_VIEW_COOKIES);
+        //order.add(ANCHOR_HEADER_BETA_BANNER_FEEDBACK);
 
         order.add(ANCHOR_HOME_SKILLS_FOR_CAREERS);
 

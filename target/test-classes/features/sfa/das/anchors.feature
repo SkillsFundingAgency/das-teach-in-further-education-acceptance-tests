@@ -1,6 +1,6 @@
 Feature: Find schemes for your business - check anchors
 
-  Scenario: Confirm header and footer anchors on the FIND_SCHEMES page
+  Scenario: Confirm header and footer anchors on the TiFE Homepage
     Given the user navigates to the "HOME" page
     Then all home page header and footer anchors link to the correct pages
 

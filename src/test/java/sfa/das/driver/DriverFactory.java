@@ -14,7 +14,10 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
  */
 @Slf4j
 public class DriverFactory {
-    public enum DriverType {
+
+    private static WebDriver driver;
+
+       public enum DriverType {
         HTMLUNIT("htmlunit"),
         CHROME_HEADLESS(""),
         CHROME("chrome");
@@ -60,38 +63,55 @@ public class DriverFactory {
      */
 
     public static WebDriver getBaseDriver(DriverType driverType) throws Exception {
-        switch (driverType) {
-            case HTMLUNIT:
-                var htmlUnitDriver = new HtmlUnitDriver() {
-                    @Override
-                    protected WebClient modifyWebClient(WebClient webClient) {
-                        webClient = super.modifyWebClient(webClient);
-                        webClient.getOptions().setThrowExceptionOnScriptError(false);
-                        webClient.getOptions().setJavaScriptEnabled(true);
-                        webClient.setScriptPreProcessor(new FixTypeErrorScriptPreProcessor());
-                        webClient.setJavaScriptErrorListener(new SilentJavaScriptErrorListener());
-                        return webClient;
-                    }
-                };
-                return htmlUnitDriver;
+        while (driver == null) {
+            switch (driverType) {
+                case HTMLUNIT:
+                    var htmlUnitDriver = new HtmlUnitDriver() {
+                        @Override
+                        protected WebClient modifyWebClient(WebClient webClient) {
+                            webClient = super.modifyWebClient(webClient);
+                            webClient.getOptions().setThrowExceptionOnScriptError(false);
+                            webClient.getOptions().setJavaScriptEnabled(true);
+                            webClient.setScriptPreProcessor(new FixTypeErrorScriptPreProcessor());
+                            webClient.setJavaScriptErrorListener(new SilentJavaScriptErrorListener());
+                            return webClient;
+                        }
+                    };
+                    return htmlUnitDriver;
 
-            case CHROME_HEADLESS:
-                WebDriverManager.chromedriver().cachePath(System.getProperty("user.dir") + "/browser").setup();
+                case CHROME_HEADLESS:
+                    WebDriverManager.chromedriver().cachePath(System.getProperty("user.dir") + "/browser").setup();
 
-                //
-                ChromeOptions options = new ChromeOptions();
-                options.addArguments("--headless=new");
+                    //
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--headless=new");
 
-                return new ChromeDriver(options);
-            case CHROME:
-                WebDriverManager.chromedriver().cachePath(System.getProperty("user.dir") + "/browser").setup();
+                    return new ChromeDriver(options);
+                case CHROME:
+                    WebDriverManager.chromedriver().cachePath(System.getProperty("user.dir") + "/browser").setup();
+                    //driver = new ChromeDriver();
+                    return new ChromeDriver();
 
-                return new ChromeDriver();
-            default:
-                throw new DriverNotFoundException("Unsupported webdriver");
+                default:
+                    throw new DriverNotFoundException("Unsupported webdriver");
+
+            }
+
+
         }
+        return driver;
     }
 
+    /*public static WebDriver getDriver(){
+        return driver;
+    }*/
+
+    public static void quitDriver(){
+        if(driver!=null){
+            driver.quit();
+            driver=null;
+        }
+    }
 
 }
 

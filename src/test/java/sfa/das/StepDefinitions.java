@@ -1,11 +1,8 @@
 package sfa.das;
-
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import lombok.extern.slf4j.Slf4j;
+
 import org.jetbrains.annotations.NotNull;
 import org.junit.Assert;
 import org.openqa.selenium.*;
@@ -13,9 +10,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+
+import sfa.das.base.Hooks;
 import sfa.das.driver.DriverFactory;
 import sfa.das.sort.*;
 import sfa.das.sort.interim_pages.*;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
+import org.openqa.selenium.logging.LogType;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -27,13 +30,23 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static org.junit.Assert.fail;
+import static sfa.das.Helper.log;
 
 @Slf4j
-public class StepDefinitions {
+public class StepDefinitions  {
+
+    private WebDriver driver;
+
+    public StepDefinitions(Hooks hooks){
+        this.driver=hooks.getDriver();
+    }
+
+
 
     public static final int SCHEME_ANCHOR_NAME_EXPLORE_SECTION = 0;
     public static final int SCHEME_ANCHOR_NAME_HOMEPAGE = 1;
     public static final int SCHEME_ANCHOR_NAME_COMPARISON_PAGE = 2;
+    public static final List<String> ANCHOR_HOMEPAGE = Arrays.asList("Learn how to prepare a Micro teach for your next interview.", "Find out more about your funding and training options", "0800 389 2502", "teach.fe@education.gov.uk");
     public static final List<String> ANCHOR_APPRENTICESHIPS = Arrays.asList("Apprenticeships", "Find out more about apprenticeships", "Apprenticeships");
     public static final List<String> ANCHOR_T_LEVELS = Arrays.asList("T Levels: industry placements", "Find out more about T Levels and industry placements", "T Levels");
     public static final List<String> ANCHOR_SWAP = Arrays.asList("Sector-based Work Academy Programme (SWAP)", "Find out more about SWAPs", "SWAPs");
@@ -46,12 +59,13 @@ public class StepDefinitions {
     public static final List<String> ANCHOR_FREE_COURSES = Arrays.asList("Free courses and additional free training", "Find out more about free courses and additional free training", "Free courses for jobs");
 
     //todo  public static final String ANCHOR_HEADER_SERVICE_NAME = "Find schemes for your business";
-    public static final String ANCHOR_HEADER_SKIP_TO_MAIN_CONTENT = "Skip to main content";
-    public static final String ANCHOR_HEADER_VIEW_COOKIES = "View cookies";
-    public static final String ANCHOR_HEADER_BETA_BANNER_FEEDBACK = "feedback";
-    public static final String ANCHOR_HOME = "Business Home";
-    public static final String ANCHOR_FIND_SCHEMES = "Find training and employment schemes";
-    public static final String ANCHOR_COMPARED_PAGE_RETURN_TO_LIST = "Return to list of all schemes";
+    //public static final String ANCHOR_HEADER_SKIP_TO_MAIN_CONTENT = "Skip to main content";
+    //public static final String ANCHOR_HEADER_VIEW_COOKIES = "View cookies";
+    //public static final String ANCHOR_HEADER_BETA_BANNER_FEEDBACK = "feedback";
+    public static final String ANCHOR_HOME = "Home";
+    //public static final String ANCHOR_FIND_SCHEMES = "Find training and employment schemes";
+    //public static final String ANCHOR_COMPARED_PAGE_RETURN_TO_LIST = "Return to list of all schemes";
+
     //todo- now a button    public static final String ANCHOR_HOME_PAGE_COMPARE_SCHEMES_IN_A_TABLE = "Compare these schemes in a table";
     public static final String ANCHOR_SHARE_EMAIL = "Email";
     public static final String ANCHOR_SHARE_FACEBOOK = "Facebook";
@@ -152,11 +166,12 @@ public class StepDefinitions {
     public static final String BLUE = "#EBF0F5";
     public static final String PINK = "#F6ECF1";
     public static final String PAGE_TITLE_SCHEME_HOME = "Scheme Home";
-    public static final String PAGE_TITLE_LANDING = "Landing Page";
+    public static final String PAGE_TITLE_LANDING = "Teach in further education";
 
 
-    private WebDriver driver;
+    //private WebDriver driver;
     private Environments.Environment environment;
+
     Map<String, String> headersMap = new HashMap<>();
     Map<String, String> findSchemesMap = new HashMap<>();
 
@@ -291,7 +306,16 @@ public class StepDefinitions {
     public static Map<String, String> homePageMap = new LinkedHashMap<>();
 
     static {
-        homePageMap.put(ANCHOR_HOME_SKILLS_FOR_CAREERS, "https://www.skillsforcareers.education.gov.uk/");
+        //homePageMap.put(ANCHOR_HOME_SKILLS_FOR_CAREERS, "https://www.skillsforcareers.education.gov.uk/");
+        //homePageMap.put(ANCHOR_SKIP_TO_MAIN_CONTENT, "https://at-teach-in-further-education.apprenticeships.education.gov.uk/#main-content");
+        //homePageMap.put(ANCHOR_HOME_MAINPAGE, "/");
+        //homePageMap.put(ANCHOR_HOME_WHAT_IS_FE_TEACHING, "https://at-teach-in-further-education.apprenticeships.education.gov.uk/cookies");
+        //homePageMap.put(ANCHOR_HOME_HEAR_FROM_CURRENT_FE_TEACHERS, "https://www.google.com/");
+       // homePageMap.put(ANCHOR_HOME_FIND_A_JOB_IN_FE, "https://www.google.com/");
+        // homePageMap.put(ANCHOR_HOME_FIND_YOUR_LOCAL_COLLEGES, "https://www.google.com/");
+        // homePageMap.put(ANCHOR_HOME_FUNDING_AND_TRAINING_OPTIONS, "https://www.google.com/");
+
+
         homePageMap.put(ANCHOR_CONTENTS_BENEFITS, "CURRENT_PAGE_URL#apprenticeships-benefits-for-your-business");
         homePageMap.put(ANCHOR_CONTENTS_STORIES, "CURRENT_PAGE_URL#apprenticeships-employer-stories");
         homePageMap.put(ANCHOR_CONTENTS_CASE_STUDIES, "CURRENT_PAGE_URL#apprenticeships-case-studies");
@@ -483,10 +507,12 @@ public class StepDefinitions {
 
 
     }
+
     public static Map<String, String> homeMap = new LinkedHashMap<>();
+
     static {
 
-        homeMap.put(ANCHOR_HOME_SKILLS_FOR_CAREERS, "https://www.skillsforcareers.education.gov.uk/");
+        //homeMap.put(ANCHOR_HOME_SKILLS_FOR_CAREERS, "https://www.skillsforcareers.education.gov.uk/");
         homeMap.put("What is FE teaching?", "Scheme Home");
         homeMap.put("Hear from current FE teachers", "https://www.gov.uk/business/finance-support");
         homeMap.put("Find a job in FE", "https://www.gov.uk/browse/employing-people");
@@ -497,7 +523,7 @@ public class StepDefinitions {
     Map<String, String> contacts = new HashMap<>();
     Map<String, String> accessibility = new HashMap<>();
 
-    @Before(order = 1)
+    /*@Before(order = 1)
     public void setup(Scenario scenario) {
         if (driver == null) {
             var webdriver = System.getProperty("browser", "chrome").toLowerCase();
@@ -514,16 +540,17 @@ public class StepDefinitions {
         environment = Environments.get(env);
         driver.get(environment.getUrl());
 
-        headersMap.put(ANCHOR_HEADER_VIEW_COOKIES, "Cookies");
-        headersMap.put(ANCHOR_HEADER_SKIP_TO_MAIN_CONTENT, PAGE_TITLE_SCHEME_HOME);
-        headersMap.put(ANCHOR_HEADER_BETA_BANNER_FEEDBACK, "https://dferesearch.fra1.qualtrics.com/jfe/form/SV_3geG7aDVWFuYTvo");
+        //headersMap.put(ANCHOR_HEADER_VIEW_COOKIES, "Cookies");
+        //headersMap.put(ANCHOR_HEADER_SKIP_TO_MAIN_CONTENT, PAGE_TITLE_SCHEME_HOME);
+        //headersMap.put(ANCHOR_HEADER_BETA_BANNER_FEEDBACK, "https://dferesearch.fra1.qualtrics.com/jfe/form/SV_3geG7aDVWFuYTvo");
 
 
-        findSchemesMap.put(ANCHOR_FIND_SCHEMES, PAGE_TITLE_SCHEME_HOME);
+        //findSchemesMap.put(ANCHOR_FIND_SCHEMES, PAGE_TITLE_SCHEME_HOME);
         findSchemesMap.put(ANCHOR_HOME, PAGE_TITLE_LANDING);
 
         //findSchemesMap.put(ANCHOR_HOME_PAGE_CLEAR_FILTERS, PAGE_TITLE_SCHEME_HOME);
         //findSchemesMap.put(ANCHOR_HOME_SKILLS_FOR_CAREERS, "https://www.skillsforcareers.education.gov.uk/");
+
 
         footerMap.put(ANCHOR_SHARE_EMAIL, "mailto:?body=" + CURRENT_PAGE_URL);
         footerMap.put(ANCHOR_SHARE_FACEBOOK, "https://www.facebook.com/sharer.php?u=" + CURRENT_PAGE_URL);
@@ -574,9 +601,9 @@ public class StepDefinitions {
 
 
     }
-
+*/
     public WebElement getAnchor(String text) {
-        return driver.findElement(By.xpath(String.format("//a[normalize-space()='%s']", text)));
+        return driver.findElement(By.xpath(String.format("//a[normalize-space()='%s'", text)));
     }
 
     @Then("all APPRENTICESHIPS anchors link to the correct pages")
@@ -588,7 +615,7 @@ public class StepDefinitions {
         expectedAnchorsMap.putAll(homePageMap);
 
         List<String> anchorsToRemove = new ArrayList<>();
-        anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
+        //anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
         anchorsToRemove.add(ANCHOR_HOME);
 
         anchorsToRemove.addAll(schemesExploreSectionMap.keySet());
@@ -643,7 +670,7 @@ public class StepDefinitions {
         expectedAnchorsMap.putAll(swap);
 
         List<String> anchorsToRemove = new ArrayList<>();//stays on same page
-        anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
+        //anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
         anchorsToRemove.add(ANCHOR_HOME);
 
         anchorsToRemove.addAll(schemesExploreSectionMap.keySet());
@@ -660,7 +687,7 @@ public class StepDefinitions {
         expectedAnchorsMap.putAll(bootcamps);
 
         List<String> anchorsToRemove = new ArrayList<>();//stays on same page
-        anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
+        //anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
         anchorsToRemove.add(ANCHOR_HOME);
 
         anchorsToRemove.addAll(schemesExploreSectionMap.keySet());
@@ -676,7 +703,7 @@ public class StepDefinitions {
         expectedAnchorsMap.putAll(multiply);
 
         List<String> anchorsToRemove = new ArrayList<>();//stays on same page
-        anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
+        //anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
         anchorsToRemove.add(ANCHOR_HOME);
 
         anchorsToRemove.addAll(schemesExploreSectionMap.keySet());
@@ -691,7 +718,7 @@ public class StepDefinitions {
         expectedAnchorsMap.putAll(employer_standards);
 
         List<String> anchorsToRemove = new ArrayList<>();//stays on same page
-        anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
+        //anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
         anchorsToRemove.add(ANCHOR_HOME);
 
         confirmPageAnchorsLite(expectedAnchorsMap, anchorsToRemove, new MultiplyComparator());
@@ -705,7 +732,7 @@ public class StepDefinitions {
         Map<String, String> expectedAnchorsMap = new HashMap<>();
         expectedAnchorsMap.putAll(htq);
         List<String> anchorsToRemove = new ArrayList<>();//stays on same page
-        anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
+        //anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
         anchorsToRemove.add(ANCHOR_HOME);
 
         if (driver instanceof ChromeDriver) {
@@ -727,7 +754,7 @@ public class StepDefinitions {
         expectedAnchorsMap.putAll(internships);
 
         List<String> anchorsToRemove = new ArrayList<>();//stays on same page
-        anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
+        //anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
         anchorsToRemove.add(ANCHOR_HOME);
 
         anchorsToRemove.addAll(schemesExploreSectionMap.keySet());
@@ -743,7 +770,7 @@ public class StepDefinitions {
         expectedAnchorsMap.putAll(careLeaverCovenant);
 
         List<String> anchorsToRemove = new ArrayList<>();//stays on same page
-        anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
+        //anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
         anchorsToRemove.add(ANCHOR_HOME);
 
         anchorsToRemove.addAll(schemesExploreSectionMap.keySet());
@@ -759,7 +786,7 @@ public class StepDefinitions {
         expectedAnchorsMap.putAll(prisoners);
 
         List<String> anchorsToRemove = new ArrayList<>();//stays on same page
-        anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
+        //anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
         anchorsToRemove.add(ANCHOR_HOME);
 
         anchorsToRemove.addAll(schemesExploreSectionMap.keySet());
@@ -782,6 +809,35 @@ public class StepDefinitions {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*  @Then("User should be redirected to Home Page")
+    public void userShouldBeRedirectedToHomePage(){
+        String URL=driver.getCurrentUrl();
+        Assert.assertEquals(URL,"https://at-teach-in-further-education.apprenticeships.education.gov.uk/");
+
+    }*/
+
+
     @Then("all FREE_COURSES anchors link to the correct pages and all explore section")
     public void allFREE_COURSESAnchorsLinkToTheCorrectPageAndAllExploreSection() throws InterruptedException {
         genericSchemePageChecks();
@@ -792,7 +848,7 @@ public class StepDefinitions {
         expectedAnchorsMap.putAll(schemesExploreSectionMap);
 
         List<String> anchorsToRemove = new ArrayList<>();
-        anchorsToRemove.add(ANCHOR_FIND_SCHEMES); //stays on same page
+        //anchorsToRemove.add(ANCHOR_FIND_SCHEMES); //stays on same page
         anchorsToRemove.add(ANCHOR_HOME);
 
         anchorsToRemove.add(ANCHOR_FREE_COURSES.get(SCHEME_ANCHOR_NAME_EXPLORE_SECTION)); //this is the selected scheme
@@ -861,7 +917,7 @@ public class StepDefinitions {
         List<String> anchorsToRemove = new ArrayList<>();
 
         anchorsToRemove.add(ANCHOR_FREE_COURSES.get(SCHEME_ANCHOR_NAME_HOMEPAGE));
-        anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
+        //anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
         anchorsToRemove.add(ANCHOR_HOME);
 
 
@@ -891,7 +947,7 @@ public class StepDefinitions {
         expectedAnchorsMap.putAll(tLevels);
 
         List<String> anchorsToRemove = new ArrayList<>();//stays on same page
-        anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
+        //anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
         anchorsToRemove.add(ANCHOR_HOME);
 
         anchorsToRemove.addAll(schemesExploreSectionMap.keySet());
@@ -909,7 +965,7 @@ public class StepDefinitions {
         expectedAnchorsMap.putAll(headersMap);
         expectedAnchorsMap.putAll(footerMap);
 
-        anchorsToRemove.add(ANCHOR_HEADER_SKIP_TO_MAIN_CONTENT); //stays on same page
+        //anchorsToRemove.add(ANCHOR_HEADER_SKIP_TO_MAIN_CONTENT); //stays on same page
         compareAndClickAnchors(expectedAnchorsMap, anchorsToRemove, new DefaultFindSchemePageSchemesComparator());
     }
 
@@ -920,7 +976,7 @@ public class StepDefinitions {
     private void confirmPageAnchorsLiteIncludeExploreSection(Map<String, String> expectedAnchorsMap, List<String> anchorsToRemove, Comparator comparator) throws InterruptedException {
         anchorsToRemove.addAll(headersMap.keySet());
         anchorsToRemove.addAll(footerMap.keySet());
-        anchorsToRemove.add(ANCHOR_HEADER_SKIP_TO_MAIN_CONTENT); //stays on same page
+        //anchorsToRemove.add(ANCHOR_HEADER_SKIP_TO_MAIN_CONTENT); //stays on same page
         compareAndClickAnchors(expectedAnchorsMap, anchorsToRemove, comparator);
     }
 
@@ -928,7 +984,7 @@ public class StepDefinitions {
     private void confirmPageAnchorsLite(Map<String, String> expectedAnchorsMap, List<String> anchorsToRemove, Comparator comparator) throws InterruptedException {
         anchorsToRemove.addAll(headersMap.keySet());
         anchorsToRemove.addAll(footerMap.keySet());
-        anchorsToRemove.add(ANCHOR_HEADER_SKIP_TO_MAIN_CONTENT); //stays on same page
+        //anchorsToRemove.add(ANCHOR_HEADER_SKIP_TO_MAIN_CONTENT); //stays on same page
         compareAndClickAnchors(expectedAnchorsMap, anchorsToRemove, comparator);
     }
 
@@ -1085,7 +1141,7 @@ public class StepDefinitions {
         expectedAnchorsMap.putAll(findSchemesMap);
 
         List<String> anchorsToRemove = new ArrayList<>();
-        anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
+        //anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
         anchorsToRemove.add(ANCHOR_HOME);
 
         anchorsToRemove.add(ANCHOR_HOME_PAGE_CLEAR_FILTERS);
@@ -1099,43 +1155,74 @@ public class StepDefinitions {
         expectedAnchors.remove(link); //stays on same page
     }
 
-    @When("the user navigates to the {string} page")
-    public void theUserNavigatesToThePage(String destination) {
+
+    //@When("the user navigates to the {string} page")
+    /*public void theUserNavigatesToThePage(String destination) {
+
 
         if (destination.equals("HOME")) {
-            Assert.assertEquals("START TEACHING IN FURTHER EDUCATION", driver.getTitle());
 
-            WebElement activeItem = driver.findElement(By.cssSelector("li.govuk-header__navigation-item--active")).findElement(By.tagName("a"));
-            Assert.assertEquals("Active state item should not be clickable https://dfedigital.atlassian.net/browse/CE-362", ANCHOR_APPRENTICESHIPS, activeItem.getText());
+            Assert.assertEquals("Home page", driver.getTitle());
 
-            getAnchor(ANCHOR_FIND_SCHEMES).click();
-            getAnchor(ANCHOR_HOME).click();
-            Assert.assertEquals("Find training and employment schemes for your business - Landing Page", driver.getTitle());
-            return;
+            //WebElement activeItem = driver.findElement(By.cssSelector("li.govuk-header__navigation-item--active")).findElement(By.tagName("a"));
+            //Assert.assertEquals("Home", activeItem.getText());
+
+           *//* String activeItem1 = driver.findElement(By.className("das-header__logo-container")).getAttribute("src");
+            Assert.assertEquals("Homepage links are not clickable", "/svg/teach-in-further-education.svg", activeItem1);
+
+            String activeItem2 = driver.findElement(By.className("das-header__logo-container")).getText();
+            Assert.assertEquals("Homepage links are not clickable", "Talk to a specialist", activeItem2);
+
+            WebElement activeItem3 = driver.findElement(By.id("imageCardBannerDiv")).findElement(By.tagName("a"));
+            Assert.assertEquals("Homepage links are not clickable", "Learn how to prepare a Micro teach for your next interview.", activeItem3.getText());
+*//*
+//            getAnchor(ANCHOR_FIND_SCHEMES).click();
+//            getAnchor(ANCHOR_HOME).click();
+//            Assert.assertEquals("Find training and employment schemes for your business - Landing Page", driver.getTitle());
+//            return;
         }
 
-        if (destination.equals("Employer standards for careers education")) {
-            getAnchor("Employer standards for careers education").click();
-            Assert.assertEquals("Find training and employment schemes for your business - Employer Standards for careers education", driver.getTitle());
+        if (destination.equals("Become a further education (FE) teacher")) {
+           driver.findElement(By.xpath("//div[@class='dfe-grid-container']//div[1]//div[1]//h3[1]//a[1]")).click();
+            Assert.assertEquals("Google", driver.getTitle());
 
-            Map<String, String> breadCrumbs = new LinkedHashMap<>();
+            *//*Map<String, String> breadCrumbs = new LinkedHashMap<>();
             breadCrumbs.put("Home", environment.getUrl());
             assertBreadCrumbsAnchors(breadCrumbs);
             assertBreadCrumbsLi("Employer standards for careers education");
-            return;
+            return;*//*
         }
 
-        getAnchor(ANCHOR_FIND_SCHEMES).click();
+        if (destination.equalsIgnoreCase("Is teaching right for me?")) {
+            driver.findElement(By.xpath("//a[normalize-space()='Is teaching right for me?' and @id='link-']")).click();
+            Assert.assertEquals("Google", driver.getTitle());
+        }
 
-        switch (destination) {
+        if (destination.equalsIgnoreCase("Check if you can teach in FE")) {
+            driver.findElement(By.xpath("//div[2]//div[1]//h3[1]//a[1]")).click();
+
+            Assert.assertEquals("Google", driver.getTitle());
+        }
+
+        if (destination.equals("Find funding and training")) {
+          //  getAnchor("Find funding and training").click();
+            driver.findElement(By.xpath("//div[4]//div[1]//h3[1]//a[1]")).click();
+            Assert.assertEquals("Home page", driver.getTitle());
+        }
+
+
+
+            //getAnchor(ANCHOR_FIND_SCHEMES).click();
+
+        *//*switch (destination) {
 
             case "FIND_SCHEMES" -> {
-                Assert.assertEquals("Find training and employment schemes for your business - " + findSchemesMap.get(ANCHOR_FIND_SCHEMES), driver.getTitle());
+               // Assert.assertEquals("Find training and employment schemes for your business - " + findSchemesMap.get(ANCHOR_FIND_SCHEMES), driver.getTitle());
 
                 Map<String, String> breadCrumbs = new LinkedHashMap<>();
                 breadCrumbs.put("Home", environment.getUrl());
                 assertBreadCrumbsAnchors(breadCrumbs);
-                assertBreadCrumbsLi(ANCHOR_FIND_SCHEMES);
+                //assertBreadCrumbsLi(ANCHOR_FIND_SCHEMES);
             }
             case "APPRENTICESHIPS" -> {
                 getAnchor(ANCHOR_APPRENTICESHIPS.get(SCHEME_ANCHOR_NAME_HOMEPAGE)).click();
@@ -1212,13 +1299,13 @@ public class StepDefinitions {
 
 
             default -> Assert.fail("unknown page");
-        }
-    }
+        }*//*
+    }*/
 
     private void assertBreadCrumbs(String breadCrumbLi) {
         Map<String, String> breadCrumbs = new LinkedHashMap<>();
         breadCrumbs.put("Home", environment.getUrl());
-        breadCrumbs.put(ANCHOR_FIND_SCHEMES, environment.getUrl() + "schemes/");
+        //breadCrumbs.put(ANCHOR_FIND_SCHEMES, environment.getUrl() + "schemes/");
         assertBreadCrumbsAnchors(breadCrumbs);
         assertBreadCrumbsLi(breadCrumbLi);
     }
@@ -1234,7 +1321,8 @@ public class StepDefinitions {
         }
     }
     private void assertBreadCrumbsLi(String breadCrumb) {
-        List<WebElement> li_s =  driver.findElement(By.cssSelector("ol.govuk-breadcrumbs__list")).findElements(By.tagName("li"));
+        List<WebElement> li_s =  driver
+                .findElement(By.cssSelector("ol.govuk-breadcrumbs__list")).findElements(By.tagName("li"));
         boolean found = false;
         for (WebElement li : li_s) {
             if (breadCrumb.equals(li.getText()))
@@ -1246,19 +1334,20 @@ public class StepDefinitions {
         Assert.assertTrue("Li not found for "  + breadCrumb, found);
     }
 
-    @After()
+    /*@After()
     public void after(Scenario scenario) throws Exception {
         if (scenario.isFailed()) {
+            final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(screenshot, "image/png", String.valueOf(scenario) + UUID.randomUUID());
 
-            String pageSource = this.driver.getPageSource();
-            //tdo          scenario.log(pageSource);
-            log.error("++++ Scenario '{}': {} ++++", scenario.getName(), scenario.getStatus());
-
-        } else {
-            log.info("++++ Scenario '{}': {} ++++", scenario.getName(), scenario.getStatus());
+            LogEntries logEntries = driver.manage().logs().get(LogType.BROWSER);
+            List<LogEntry> logs = logEntries.getAll();
+            for (LogEntry entry : logs) {
+                Log.Info(new Date(entry.getTimestamp()) + " " + entry.getLevel() + " " + entry.getMessage());
+            }
         }
         driver.quit();
-    }
+    }*/
 
     @Then("filter reports the correct data")
     public void filterReportsTheCorrectData() throws InterruptedException {
@@ -1358,7 +1447,7 @@ public class StepDefinitions {
         anchorsToRemove.addAll(headersMap.keySet());
         anchorsToRemove.addAll(footerMap.keySet());
         anchorsToRemove.add(ANCHOR_HOME_PAGE_CLEAR_FILTERS);
-        anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
+        //anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
         anchorsToRemove.add(ANCHOR_HOME);
 
         anchorsToRemove.add(ANCHOR_HOME_SKILLS_FOR_CAREERS);
@@ -1630,9 +1719,9 @@ public class StepDefinitions {
 
     private void theySeeGivenSchemesCompared(Map<String, String> schemesMap, boolean clickAnchor) throws InterruptedException {
         List<String> anchorsToRemove = new ArrayList<>();
-        anchorsToRemove.add(ANCHOR_COMPARED_PAGE_RETURN_TO_LIST);
-        anchorsToRemove.add(ANCHOR_HEADER_SKIP_TO_MAIN_CONTENT);
-        anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
+        //anchorsToRemove.add(ANCHOR_COMPARED_PAGE_RETURN_TO_LIST);
+        //anchorsToRemove.add(ANCHOR_HEADER_SKIP_TO_MAIN_CONTENT);
+        //anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
         anchorsToRemove.add(ANCHOR_HOME);
 
         anchorsToRemove.addAll(footerMap.keySet());
@@ -1672,11 +1761,15 @@ public class StepDefinitions {
     @Then("all home page header and footer anchors link to the correct pages")
     public void allHomePageHeaderAndFooterAnchorsLinkToTheCorrectPages() throws InterruptedException {
 
-        WebElement imageElement = driver.findElement(By.cssSelector("img.app-header__department-for-education-logo"));
-        Assert.assertEquals("Accessibility - https://dfedigital.atlassian.net/browse/CE-303", "Teach in further education logo", imageElement.getAttribute("alt"));
+        //WebElement imageElement = driver.findElement(By.cssSelector("img.app-header__department-for-education-logo"));
+        //Assert.assertEquals("Accessibility - https://dfedigital.atlassian.net/browse/CE-303", "Teach in further education logo", imageElement.getAttribute("alt"));
 
-        WebElement hiddenFilterButton = driver.findElement(By.id("filter-schemes"));
-        Assert.assertEquals("Accessibility - https://dfedigital.atlassian.net/browse/CE-306", "button", hiddenFilterButton.getAttribute("role"));
+        WebElement imageElement = driver.findElement(By.cssSelector("img.app-header__department-for-education-logo"));
+        Assert.assertEquals("Teaching In further education Logo displayed", "Department for education logo", imageElement.getAttribute("alt"));
+
+
+        //WebElement hiddenFilterButton = driver.findElement(By.id("filter-schemes"));
+        //Assert.assertEquals("Accessibility - https://dfedigital.atlassian.net/browse/CE-306", "button", hiddenFilterButton.getAttribute("role"));
 
         WebElement anchorElement = getAnchor(ANCHOR_HOME_SKILLS_FOR_CAREERS);
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -1691,8 +1784,8 @@ public class StepDefinitions {
         Map<String, String> expectedAnchorsMap = new HashMap<>();
 
         List<String> anchorsToRemove = new ArrayList<>();
-        anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
-        anchorsToRemove.add(ANCHOR_HOME_PAGE_CLEAR_FILTERS);
+        //anchorsToRemove.add(ANCHOR_FIND_SCHEMES);
+        //anchorsToRemove.add(ANCHOR_HOME_PAGE_CLEAR_FILTERS);
         anchorsToRemove.addAll(findSchemesMap.keySet());
         anchorsToRemove.addAll(schemesHomePageDefaultMap.keySet());
         confirmPageHeaderAndFooterAnchors(expectedAnchorsMap, anchorsToRemove);
@@ -1752,6 +1845,7 @@ public class StepDefinitions {
         getAnchor(ANCHOR_COMPARISON_PAGE_CLEAR_FILTERS).click();
         theySeeGivenSchemesCompared(schemesComparisonPageMap, false);
     }
+
 
 
 }

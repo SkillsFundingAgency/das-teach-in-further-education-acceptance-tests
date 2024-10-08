@@ -13,8 +13,8 @@ public class MultiplyComparator implements Comparator<String> {
     static final List<String> order = new ArrayList<>( );
 
     static {
-        order.add(ANCHOR_HEADER_VIEW_COOKIES);
-        order.add(ANCHOR_HEADER_BETA_BANNER_FEEDBACK);
+        //order.add(ANCHOR_HEADER_VIEW_COOKIES);
+        //order.add(ANCHOR_HEADER_BETA_BANNER_FEEDBACK);
 
 
 

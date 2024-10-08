@@ -23,8 +23,8 @@ public class ComparisonPageSchemesComparator implements Comparator<String> {
 //    Support prisoners and prison leavers
 
     static {
-        order.add(ANCHOR_HEADER_VIEW_COOKIES);
-        order.add(ANCHOR_HEADER_BETA_BANNER_FEEDBACK);
+        //order.add(ANCHOR_HEADER_VIEW_COOKIES);
+        //order.add(ANCHOR_HEADER_BETA_BANNER_FEEDBACK);
 
         order.add(ANCHOR_COMPARISON_PAGE_CLEAR_FILTERS);
 

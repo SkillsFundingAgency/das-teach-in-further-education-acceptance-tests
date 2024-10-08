@@ -1,14 +1,20 @@
 package sfa.das;
 
+import com.github.dockerjava.core.dockerfile.DockerfileStatement;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.yaml.snakeyaml.Yaml;
 import java.util.Map;
+import java.util.Optional;
 
 @Data
 @Slf4j
 public class Environments {
     private Map<String, Environment> environments;
+
+    public Map<String,Environment> getEnvironments(){
+        return  environments;
+    }
 
     @Data
     public static class Environment {
