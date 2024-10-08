@@ -361,3 +361,4 @@ target
 *.iml
 /browser/
 .env
+*.exe
