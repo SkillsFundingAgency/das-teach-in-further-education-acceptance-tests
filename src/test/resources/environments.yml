@@ -1,0 +1,12 @@
+environments:
+  at:
+    url: "https://at-teach-in-further-education.apprenticeships.education.gov.uk/"
+
+  test:
+    url: "https://test-teach-in-further-education.apprenticeships.education.gov.uk/"
+
+  pp:
+    url: "https://pp-teach-in-further-education.apprenticeships.education.gov.uk/"
+
+  live:
+    url: "https://find-employer-schemes.education.gov.uk/"
