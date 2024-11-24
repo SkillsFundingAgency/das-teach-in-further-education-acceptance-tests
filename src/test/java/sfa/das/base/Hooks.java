@@ -10,6 +10,8 @@ import org.openqa.selenium.logging.LogType;
 import sfa.das.Environments;
 import sfa.das.Log;
 import sfa.das.driver.DriverFactory;
+import sfa.das.utils.WebUtils;
+
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -34,9 +36,10 @@ public class Hooks {
             }
 
 
-        final var env = System.getProperty("env", "test");
+        final var env = System.getProperty("env", "live");
         environment = Environments.get(env);
         driver.get(environment.getUrl());
+        //WebUtils.acceptCookies();
     }
 
         public static WebDriver getDriver(){

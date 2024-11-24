@@ -30,6 +30,13 @@
 			<version>${java-dotenv.version}</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.contentful.java/java-sdk -->
+		<dependency>
+			<groupId>com.contentful.java</groupId>
+			<artifactId>java-sdk</artifactId>
+			<version>10.0.0</version>
+		</dependency>
+
 
 
 
@@ -39,6 +46,13 @@
 			<artifactId>log4j-core</artifactId>
 			<version>${log4j2.version}</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.20.0</version>
+		</dependency>
+
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
@@ -74,13 +88,6 @@
 			<version>${maven.cucumber.reporting.version}</version>
 		</dependency>
 
-<!--		&lt;!&ndash; Maven &ndash;&gt;-->
-<!--		<dependency>-->
-<!--			<groupId>org.apache.maven.plugins</groupId>-->
-<!--			<artifactId>maven-surefire-plugin</artifactId>-->
-<!--			<version>${maven.surefire.plugin.version}</version>-->
-<!--		</dependency>-->
-
 		<!-- Selenium -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -94,9 +101,6 @@
 			<artifactId>htmlunit3-driver</artifactId>
 			<version>${selenium.version}</version>
 		</dependency>
-
-
-
 
 		<!-- automate management of the drivers -->
 		<dependency>

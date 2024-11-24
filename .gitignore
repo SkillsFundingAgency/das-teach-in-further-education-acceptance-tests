@@ -349,7 +349,8 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
-/target
+/target/
+/build/
 
 .idea
 .DS_Store
@@ -362,3 +363,15 @@ target
 /browser/
 .env
 *.exe
+/out/
+/lib/
+
+#selenium driver binaries
+/drivers/
+
+#Generated Reports
+/reports/
+
+# Java archive files
+*.jar
+
