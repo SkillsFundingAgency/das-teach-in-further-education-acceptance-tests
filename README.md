@@ -38,7 +38,7 @@ Running Tests:
 - We can run individual Test scenarios from feature file as well
 
 * To run tests by tag:
-- mvn clean test -D"cucumber.filter.tags=@Global"
+- mvn clean test -D"cucumber.filter.tags=@tife"
 
 * To generate a report: 
 - Test reports generated after execution (Test Report Path: target/cucumber/cucumber-html-reports/js/overview-features.html)

@@ -31,8 +31,6 @@ public class Environments {
 
     }
 
-
-
     public static Environment get(String env) {
         Yaml yaml = new Yaml();
         return Helper.loadYaml("environments.yml")

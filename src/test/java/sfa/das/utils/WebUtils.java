@@ -110,21 +110,8 @@ public class WebUtils {
             driver.navigate().back();
         }
     }
-
 }
-  /*  public static void clickElement(WebElement element){
-        try{
-            WebDriverWait wait=new WebDriverWait(Hooks.getDriver(), Duration.ofSeconds(10));
-            wait.until(ExpectedConditions.elementToBeClickable(element));
-            element.click();
-        }catch(NoSuchElementException e){
-            System.out.println("Element not found: "+e.getMessage());
-        }catch (TimeoutException e){
-            System.out.println("Element was not clickable within the timeout: "+e.getMessage());
-        }catch (Exception e){
-            System.out.println("An error occurred while clicking the element: "+e.getMessage());
-        }
-    }*/
+
 
 
 

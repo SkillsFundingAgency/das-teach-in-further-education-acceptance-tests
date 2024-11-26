@@ -26,7 +26,7 @@ public class DriverFactory {
             this.text = text;
         }
 
-        private String text;
+        private final String text;
 
         public static DriverType value(final String text) {
             for (DriverType value : DriverType.values()) {
@@ -101,10 +101,6 @@ public class DriverFactory {
         }
         return driver;
     }
-
-    /*public static WebDriver getDriver(){
-        return driver;
-    }*/
 
     public static void quitDriver(){
         if(driver!=null){

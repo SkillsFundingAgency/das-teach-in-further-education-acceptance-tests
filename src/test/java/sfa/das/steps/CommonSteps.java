@@ -1,8 +1,5 @@
 package sfa.das.steps;
 
-import com.contentful.java.cda.CDAArray;
-import com.contentful.java.cda.CDAClient;
-import com.contentful.java.cda.CDAEntry;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -17,81 +14,23 @@ import sfa.das.base.Hooks;
 import sfa.das.pages.CommonPage;
 import sfa.das.utils.WebUtils;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 public class CommonSteps {
 
-    private WebDriver driver;
-    private CommonPage commonPage;
+    private final WebDriver driver;
+    private final CommonPage commonPage;
 
-    private static final Logger log= LogManager.getLogger(CommonSteps.class);
+    private static final Logger log = LogManager.getLogger(CommonSteps.class);
 
-    private  List<String> brokenLinks;
+    private List<String> brokenLinks;
 
-    public CommonSteps(){
-        this.driver= Hooks.getDriver();
+    public CommonSteps() {
+        this.driver = Hooks.getDriver();
 
-        commonPage =new CommonPage(driver);
+        commonPage = new CommonPage(driver);
     }
-
-    private static final String SPACE_ID="97af9qkbawls";
-    private static final String ENVIRONMENT="at";
-    private static final String ACCESS_TOKEN="r8ol9xV3A8rDLiOZxzI99r1fC67_yt-n8wekfQRyp9o";
-
-    private CDAClient client= CDAClient.builder()
-            .setSpace(SPACE_ID)
-            .setToken(ACCESS_TOKEN)
-            .setEnvironment(ENVIRONMENT)
-            .build();
-
-
-
-    public List<CDAEntry> getPublishedPages(){
-        CDAArray entryArray=client.fetch(CDAEntry.class)
-                .where("content_type","page")
-
-                .all();
-
-
-        //.where("fields.status","published")
-        List<CDAEntry> publishedPages=new ArrayList<>();
-        for (Map.Entry<String,CDAEntry> entry: entryArray.entries().entrySet()){
-            CDAEntry cdaEntry=entry.getValue();
-            System.out.println("Entry ID: "+cdaEntry.id());
-            System.out.println("Content Type: "+cdaEntry.contentType().id());
-            Map<String, Object> fields=cdaEntry.rawFields();
-            System.out.println("Raw Field:");
-            for (Map.Entry<String, Object> field: fields.entrySet()){
-                System.out.println(field.getKey());
-                System.out.println(field.getValue());
-                         }
-            Object statusFields=fields.get("Status");
-            if (statusFields!=null && "published".equalsIgnoreCase(statusFields.toString())){
-                publishedPages.add(cdaEntry);
-                System.out.println("Total published Pages : "+publishedPages.size());
-            }
-            if ("published".equalsIgnoreCase(cdaEntry.getField("status"))){
-                publishedPages.add(cdaEntry);
-
-            }
-        }
-        return publishedPages;
-    }
-
-   /* private static void validatePageTitle(String pageTitle, String environment){
-        String expectedTitleAt="Is teaching right for me";
-        String expectedTitlePp="Is FE teaching right for me?";
-        if (env.equals("at")){
-            Assert.assertEquals("Page title does not match for 'at' environment. ", expectedTitleAt, pageTitle);
-        } else if (environment.equals("pp")){
-            Assert.assertEquals("Page title does not match for 'pp' environment. ", expectedTitlePp, pageTitle);
-        } else{
-            Assert.fail("Unknown environment: "+environment);
-        }
-    }*/
-
 
     @When("the user navigates to the {string} page")
     public void theUserNavigatesToThePage(String destination) {
@@ -108,118 +47,108 @@ public class CommonSteps {
 
         if (destination.equalsIgnoreCase("Is teaching right for me?")) {
             driver.findElement(commonPage.getIsTeachingRightForMeMenu()).click();
-            String currentUrl=driver.getCurrentUrl();
-            String[] urlParts=currentUrl.split("/");
-            String actualEndPart=urlParts[urlParts.length-1];
+            String currentUrl = driver.getCurrentUrl();
+            String[] urlParts = currentUrl.split("/");
+            String actualEndPart = urlParts[urlParts.length - 1];
             Assert.assertEquals("The URL does not end with the expected value. ", "is-teaching-right-for-me", actualEndPart);
-            //validatePageTitle(driver.getTitle(),env);
         }
 
         if (destination.equalsIgnoreCase("Search for a teaching job")) {
             driver.findElement(commonPage.getSearchForATeachingJobMenu()).click();
-            String currentUrl=driver.getCurrentUrl();
-            String[] urlParts=currentUrl.split("/");
-            String actualEndPart=urlParts[urlParts.length-1];
+            String currentUrl = driver.getCurrentUrl();
+            String[] urlParts = currentUrl.split("/");
+            String actualEndPart = urlParts[urlParts.length - 1];
             Assert.assertEquals("The URL does not end with the expected value. ", "search-for-a-teaching-job", actualEndPart);
         }
 
         if (destination.equalsIgnoreCase("Find funding and training")) {
             driver.findElement(commonPage.getFindFundingAndTrainingMenu()).click();
-            String currentUrl=driver.getCurrentUrl();
-            String[] urlParts=currentUrl.split("/");
-            String actualEndPart=urlParts[urlParts.length-1];
+            String currentUrl = driver.getCurrentUrl();
+            String[] urlParts = currentUrl.split("/");
+            String actualEndPart = urlParts[urlParts.length - 1];
             Assert.assertEquals("The URL does not end with the expected value. ", "find-funding-and-training", actualEndPart);
         }
     }
 
 
-
     @Then("DFE and FE Logo should be displayed in header")
-    public void DFEAndFeLogoShouldBeDisplayedInHeader(){
+    public void DFEAndFeLogoShouldBeDisplayedInHeader() {
         Assert.assertTrue(driver.findElement(commonPage.get_DFELogo()).isDisplayed());
         Assert.assertTrue(driver.findElement(commonPage.get_FELogo()).isDisplayed());
         Assert.assertTrue(driver.findElement(commonPage.get_TeachingFELogo()).isDisplayed());
     }
 
     @When("user clicks on 'Is Teaching Right For Me?' Menu")
-    public void userClicksOnIsTeachingRightForMeMenu(){
+    public void userClicksOnIsTeachingRightForMeMenu() {
         driver.findElement(commonPage.getIsTeachingRightForMeMenu()).click();
     }
 
     @Then("user should be navigated to 'Is Teaching Right For Me?' Page")
     public void userShouldBeNavigatedToIsTeachingRightForMePage() {
-        String actualIsTeachingRightForMePageTitle= driver.getTitle();
-        //Assert.assertEquals(actualIsTeachingRightForMePageTitle,homePage.isTeachingRightForMePageTitle);
+        String actualIsTeachingRightForMePageTitle = driver.getTitle();
         Assert.assertTrue(actualIsTeachingRightForMePageTitle.contains(commonPage.isTeachingRightForMePageTitle));
     }
 
     @When("user clicks on 'Become a FE Teacher' Menu")
-    public void userClicksOnBecomeAFETeachersMenu(){
+    public void userClicksOnBecomeAFETeachersMenu() {
         driver.findElement(commonPage.getBecomeAFETeacherMenu()).click();
     }
 
     @Then("user should be navigated to 'Become a FE Teacher' Page")
     public void userShouldBeNavigatedToBecomeAFETeacherPage() {
-        String actualBecomeAFETeacherPageTitle=driver.getTitle();
-        //Assert.assertEquals(actualBecomeAFETeacherPageTitle,homePage.becomeAFETeacherPageTitle);
+        String actualBecomeAFETeacherPageTitle = driver.getTitle();
         Assert.assertTrue(actualBecomeAFETeacherPageTitle.contains(commonPage.becomeAFETeacherPageTitle));
     }
 
     @When("user clicks on 'Talk to an adviser' Menu")
-    public void userClicksOnTalkToAnAdviserMenu(){
+    public void userClicksOnTalkToAnAdviserMenu() {
         driver.findElement(commonPage.getTalkToAnAdvisorMenu()).click();
     }
 
     @Then("user should be navigated to 'Talk to an adviser' Page")
-    public void userShouldBeNavigatedToTalkToAnAdviserPage(){
-        String actualTalkToAnAdvisorPageTitle=driver.getTitle();
-        //Assert.assertEquals(actualTalkToAnAdvisorPageTitle,homePage.talkToAnAdvisorPageTitle);
+    public void userShouldBeNavigatedToTalkToAnAdviserPage() {
+        String actualTalkToAnAdvisorPageTitle = driver.getTitle();
         Assert.assertTrue(actualTalkToAnAdvisorPageTitle.contains(commonPage.talkToAnAdvisorPageTitle));
     }
 
     @When("user clicks on 'Search for a teaching job' Menu")
-    public void userClicksOnSearchForATeachingJobMenu(){
+    public void userClicksOnSearchForATeachingJobMenu() {
         driver.findElement(commonPage.getSearchForATeachingJobMenu()).click();
     }
 
     @Then("user should be navigated to 'Search for a teaching job' Page")
-    public void userShouldBeNavigatedTSearchForATeachingJobPage(){
-        String actualSearchForATeachingJobPageTitle=driver.getTitle();
+    public void userShouldBeNavigatedTSearchForATeachingJobPage() {
+        String actualSearchForATeachingJobPageTitle = driver.getTitle();
         //Assert.assertEquals(actualSearchForATeachingJobPageTitle,homePage.searchForATeachingJobPageTitle);
         Assert.assertTrue(actualSearchForATeachingJobPageTitle.contains(commonPage.searchForATeachingJobPageTitle));
     }
 
     @When("user clicks on 'Find Funding And Training' Menu")
-    public void userClicksOnFindFundingAndTrainingMenu(){
+    public void userClicksOnFindFundingAndTrainingMenu() {
         driver.findElement(commonPage.getFindFundingAndTrainingMenu()).click();
     }
 
     @Then("user should be navigated to 'Find Funding And Training' Page")
-    public void userShouldBeNavigatedToFindFundingAndTrainingPage(){
-        String actualFindFundingAndTrainingPageTitle=driver.getTitle();
+    public void userShouldBeNavigatedToFindFundingAndTrainingPage() {
+        String actualFindFundingAndTrainingPageTitle = driver.getTitle();
         Assert.assertEquals(actualFindFundingAndTrainingPageTitle, commonPage.findFundingAndTrainingPageTitle);
     }
 
 
-
-
-
-
-
     @Then("User should be able to see Phone and Email contact details")
     public void validateContactDetails() {
-        WebElement contactIcon=driver.findElement(commonPage.getFooterContactIcon());
+        WebElement contactIcon = driver.findElement(commonPage.getFooterContactIcon());
         contactIcon.isDisplayed();
 
-        WebElement contactNumber=driver.findElement(commonPage.getFooterContactNumber());
-        String contactNum=contactNumber.getText();
+        WebElement contactNumber = driver.findElement(commonPage.getFooterContactNumber());
+        String contactNum = contactNumber.getText();
         Assert.assertEquals(contactNum, commonPage.contactNumber);
 
-        WebElement emailIcon=driver.findElement(commonPage.getFooterEmailIcon());
+        WebElement emailIcon = driver.findElement(commonPage.getFooterEmailIcon());
         emailIcon.isDisplayed();
 
-        WebElement emailText=driver.findElement(commonPage.getFooterEmailText());
-        String emailValue=emailText.getText();
+        WebElement emailText = driver.findElement(commonPage.getFooterEmailText());
+        String emailValue = emailText.getText();
         Assert.assertEquals(emailValue, commonPage.emailValue);
 
     }
@@ -228,10 +157,11 @@ public class CommonSteps {
     public void user_clicks_on_open_govt_licence_link() {
         driver.findElement(commonPage.getFooterOpenGovtLicenceLink()).click();
     }
+
     @Then("user should be navigated to open govt licence Page")
     public void user_should_be_navigated_to_open_govt_licence_page() {
-        String pageTitle=driver.getTitle();
-        Assert.assertEquals(pageTitle,"Open Government Licence");
+        String pageTitle = driver.getTitle();
+        Assert.assertEquals(pageTitle, "Open Government Licence");
     }
 
 
@@ -239,10 +169,11 @@ public class CommonSteps {
     public void user_clicks_on_crown_copy_right_link() {
         driver.findElement(commonPage.getFooterCrownCopyrightLink()).click();
     }
+
     @Then("user should be navigated to crown copy right Page")
     public void user_should_be_navigated_to_crown_copy_right_page() {
-        String pageTitle=driver.getTitle();
-        Assert.assertEquals(pageTitle,"Crown copyright - Re-using PSI");
+        String pageTitle = driver.getTitle();
+        Assert.assertEquals(pageTitle, "Crown copyright - Re-using PSI");
     }
 
 
@@ -250,42 +181,44 @@ public class CommonSteps {
     public void user_clicks_on_cookies_policy_link() {
         driver.findElement(commonPage.getFooterCookiePolicyLink()).click();
     }
+
     @Then("user should be navigated to Cookies Policy Page")
     public void user_should_be_navigated_to_cookies_policy_page() {
-        String pageTitle=driver.getTitle();
-        Assert.assertEquals(pageTitle,"Cookies policy - Teach in further education - Department for Education");
+        String pageTitle = driver.getTitle();
+        Assert.assertEquals(pageTitle, "Cookies policy - Teach in further education - Department for Education");
     }
+
     @When("user clicks on Accessibility statement Link")
     public void user_clicks_on_accessibility_statement_link() {
         driver.findElement(commonPage.getFooterAccessibilityStatementLink()).click();
     }
+
     @Then("user should be navigated to Accessibility statement Page")
     public void user_should_be_navigated_to_accessibility_statement_page() {
-        String actualTitle=driver.getTitle();
+        String actualTitle = driver.getTitle();
         Assert.assertEquals(actualTitle, commonPage.accessibilityStatementPageTitle);
     }
+
     @When("user clicks on Privacy Policy Link")
     public void user_clicks_on_privacy_policy_link() {
         driver.findElement(commonPage.getFooterPrivacyPolicyLink()).click();
     }
+
     @Then("user should be navigated to Privacy Policy Page")
     public void user_should_be_navigated_to_privacy_policy_page() {
-        String actualTitle=driver.getTitle();
+        String actualTitle = driver.getTitle();
         Assert.assertEquals(actualTitle, commonPage.privacyPolicyPageTitle);
     }
 
     @When("user retrieve all the links on the page")
     public void userRetrieveAllTheLinksOnThePage() {
-       brokenLinks=WebUtils.checkAllLinks(driver);
+        brokenLinks = WebUtils.checkAllLinks(driver);
     }
 
     @Then("each link should return a successful status code")
     public void eachLinkShouldReturnASuccessfulStatusCode() {
-        Assert.assertTrue("There are broken links on the page: "+brokenLinks, brokenLinks.isEmpty());
+        Assert.assertTrue("There are broken links on the page: " + brokenLinks, brokenLinks.isEmpty());
     }
-
-
-
 
 
     @When("the user visit a page on the site")
@@ -295,17 +228,17 @@ public class CommonSteps {
 
     @Then("they see the cookie consent banner")
     public void theySeeTheCookieConsentBanner() {
-        Assert.assertTrue("cookie consent banner is not displayed",driver.findElement(commonPage.getCookieHeadingTitle()).isDisplayed());
+        Assert.assertTrue("cookie consent banner is not displayed", driver.findElement(commonPage.getCookieHeadingTitle()).isDisplayed());
     }
 
     @Given("the current user has not yet given consent to using cookies")
     public void theCurrentUserHasNotYetGivenConsentToUsingCookies() {
-        Assert.assertTrue("Cookie section is not displayed",driver.findElement(commonPage.getAcceptCookieBtn()).isDisplayed());
+        Assert.assertTrue("Cookie section is not displayed", driver.findElement(commonPage.getAcceptCookieBtn()).isDisplayed());
     }
 
     @And("they are able to see a cookie banner")
     public void theyAreAbleToSeeACookieBanner() {
-        Assert.assertTrue("cookie consent banner is not displayed",driver.findElement(commonPage.getCookieHeadingTitle()).isDisplayed());
+        Assert.assertTrue("cookie consent banner is not displayed", driver.findElement(commonPage.getCookieHeadingTitle()).isDisplayed());
     }
 
     @Then("the banner contains a link to view the cookies we use")
@@ -327,9 +260,9 @@ public class CommonSteps {
 
     @Then("cookies banner should not be displayed")
     public void cookiesBannerShouldNotBeDisplayed() {
-        List<WebElement> elements=driver.findElements(commonPage.getCookieHeadingTitle());
-        boolean isDisplayed=elements.size()>0 && elements.get(0).isDisplayed();
-        Assert.assertFalse("Cookie Banner is displayed.",isDisplayed);
+        List<WebElement> elements = driver.findElements(commonPage.getCookieHeadingTitle());
+        boolean isDisplayed = elements.size() > 0 && elements.get(0).isDisplayed();
+        Assert.assertFalse("Cookie Banner is displayed.", isDisplayed);
     }
 
     @When("the user rejects the cookies on the site")
@@ -340,22 +273,22 @@ public class CommonSteps {
 
     @When("the user modifies the url")
     public void theUserModifiesTheUrl() {
-        String currentUrl=driver.getCurrentUrl();
-        String modifiedUrl=currentUrl+"invalid-page";
+        String currentUrl = driver.getCurrentUrl();
+        String modifiedUrl = currentUrl + "invalid-page";
         driver.get(modifiedUrl);
 
     }
 
     @Then("page not found message should be displayed")
     public void pageNotFoundMessageShouldBeDisplayed() {
-        String currentTitle=driver.getTitle();
-        Assert.assertEquals("Page not found title is not displayed.",currentTitle,"Page not found");
+        String currentTitle = driver.getTitle();
+        Assert.assertEquals("Page not found title is not displayed.", currentTitle, "Page not found");
     }
 
     @Then("the user does not get given analytics cookies")
     public void theUserDoesNotGetGivenAnalyticsCookies() {
-        List<WebElement> scriptTags=driver.findElements(commonPage.getGoogleTagManager());
-        boolean isGTMDisplayed=scriptTags.stream().anyMatch(WebElement::isDisplayed);
+        List<WebElement> scriptTags = driver.findElements(commonPage.getGoogleTagManager());
+        boolean isGTMDisplayed = scriptTags.stream().anyMatch(WebElement::isDisplayed);
         Assert.assertFalse("No script with 'googletagmanager.com' should be displayed", isGTMDisplayed);
     }
 
@@ -367,10 +300,10 @@ public class CommonSteps {
 
     @Then("the user does get given analytics cookies")
     public void theUserDoesGetGivenAnalyticsCookies() {
-        List<WebElement> scriptTags=driver.findElements(commonPage.getGoogleTagManager());
+        List<WebElement> scriptTags = driver.findElements(commonPage.getGoogleTagManager());
         Assert.assertFalse("No script with 'googletagmanager.com' should be displayed", scriptTags.isEmpty());
-        String srcValue=scriptTags.get(0).getAttribute("src");
-        Assert.assertTrue("The Google Tag Manager is not displayed.",srcValue.startsWith("https://www.googletagmanager.com"));
+        String srcValue = scriptTags.get(0).getAttribute("src");
+        Assert.assertTrue("The Google Tag Manager is not displayed.", srcValue.startsWith("https://www.googletagmanager.com"));
     }
 
 
@@ -391,54 +324,32 @@ public class CommonSteps {
 
     @Then("user should see following validation messages:")
     public void userShouldSeeFollowingValidationMessages(DataTable dataTable) {
-        Map<String,String> expectedMessages=dataTable.asMap(String.class, String.class);
-        for (Map.Entry<String,String> entry: expectedMessages.entrySet()){
-            String field=entry.getKey();
-            String expectedMessage= entry.getValue();
+        Map<String, String> expectedMessages = dataTable.asMap(String.class, String.class);
+        for (Map.Entry<String, String> entry : expectedMessages.entrySet()) {
+            String field = entry.getKey();
+            String expectedMessage = entry.getValue();
             WebElement errorElement;
-            switch (field){
+            switch (field) {
                 case "First Name":
-                    errorElement= driver.findElement(commonPage.getFirstNameErrorMsg());
+                    errorElement = driver.findElement(commonPage.getFirstNameErrorMsg());
                     break;
                 case "Last Name":
-                    errorElement= driver.findElement(commonPage.getLastNameErrorMsg());
+                    errorElement = driver.findElement(commonPage.getLastNameErrorMsg());
                     break;
                 case "Email":
-                    errorElement= driver.findElement(commonPage.getEmailErrorMsg());
+                    errorElement = driver.findElement(commonPage.getEmailErrorMsg());
                     break;
                 case "Subject of Interest":
-                    errorElement= driver.findElement(commonPage.getSubjectErrorMsg());
+                    errorElement = driver.findElement(commonPage.getSubjectErrorMsg());
                     break;
                 case "Location of Interest":
-                    errorElement= driver.findElement(commonPage.getLocationErrorMsg());
+                    errorElement = driver.findElement(commonPage.getLocationErrorMsg());
                     break;
                 default:
-                    throw new IllegalArgumentException("Invalid field: "+field);
+                    throw new IllegalArgumentException("Invalid field: " + field);
             }
-            String actualMessage=errorElement.getText().replace("Error:","").trim();
-        Assert.assertEquals("Validation message for: "+field+" did not match", expectedMessage, actualMessage);
+            String actualMessage = errorElement.getText().replace("Error:", "").trim();
+            Assert.assertEquals("Validation message for: " + field + " did not match", expectedMessage, actualMessage);
         }
-    }
-
-    @When("I validate the published pages on the front end")
-    public void iValidateThePublishedPagesOnTheFrontEnd() {
-        List<CDAEntry> pages=getPublishedPages();
-            String baseUrl="https://at-teach-in-further-education.apprenticeships.education.gov.uk/";
-
-            for (CDAEntry pageEntry:pages){
-                String slug=pageEntry.getField("slug").toString();
-
-                String pageUrl=baseUrl+slug;
-
-                driver.get(pageUrl);
-
-                boolean isPageLoaded= commonPage.isPageLoaded(slug);
-                Assert.assertTrue("Page with slug '"+slug+ "'should be loaded", isPageLoaded);
-            }
-
-    }
-
-    @Then("I should see the pages with title")
-    public void iShouldSeeThePagesWithTitle() {
     }
 }
