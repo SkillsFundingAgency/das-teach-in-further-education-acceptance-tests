@@ -24,9 +24,12 @@ public class Environments {
             public String getUrl() {
                 return url;
             }
+
+            public void setName(String name){
+                this.name=name;
+            }
+
     }
-
-
 
     public static Environment get(String env) {
         Yaml yaml = new Yaml();

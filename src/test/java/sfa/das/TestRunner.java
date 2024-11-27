@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
                 "html:target/cucumber-reports/cucumber-reports.html",
                 "junit:target/feature/junit/cucumber.xml"
         },
-        tags =  "not @test")
+        tags =  "@tife")
 public class TestRunner {
 }
 

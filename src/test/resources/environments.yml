@@ -9,4 +9,4 @@ environments:
     url: "https://pp-teach-in-further-education.apprenticeships.education.gov.uk/"
 
   live:
-    url: "https://find-employer-schemes.education.gov.uk/"
+    url: "https://www.teachinfurthereducation.education.gov.uk/?originalReferrer="
